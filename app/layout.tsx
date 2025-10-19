@@ -1,20 +1,7 @@
 import type { Metadata } from "next";
-import { Orbitron, Share_Tech_Mono } from "next/font/google";
-import "./globals.css";
-import "./styles/terminal.css";
-import "./styles/neon.css";
-
-const orbitron = Orbitron({
-  variable: "--font-orbitron",
-  subsets: ["latin"],
-  weight: ["400", "700", "900"],
-});
-
-const shareTechMono = Share_Tech_Mono({
-  variable: "--font-share-tech-mono",
-  subsets: ["latin"],
-  weight: ["400"],
-});
+import "./css/main.css";
+import "./css/neon.css";
+import "./css/terminal.css";
 
 export const metadata: Metadata = {
   title: "Digital Fraud Detective | Command Center",
@@ -48,13 +35,9 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet" />
       </head>
-      <body
-        className={`${orbitron.variable} ${shareTechMono.variable} antialiased`}
-        style={{
-          fontFamily: 'var(--font-body)',
-        }}
-      >
+      <body>
         {children}
       </body>
     </html>
