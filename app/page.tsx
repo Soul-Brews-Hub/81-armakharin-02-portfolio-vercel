@@ -1,13 +1,13 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import TerminalLoader from '@/components/TerminalLoader';
-import Navigation from '@/components/Navigation';
-import AgentProfile from '@/components/AgentProfile';
-import CaseFiles from '@/components/CaseFiles';
-import IntelligenceReports from '@/components/IntelligenceReports';
-import SecureComms from '@/components/SecureComms';
-import Footer from '@/components/Footer';
+import TerminalLoader from './components/TerminalLoader';
+import Navigation from './components/Navigation';
+import AgentProfile from './components/AgentProfile';
+import CaseFiles from './components/CaseFiles';
+import IntelligenceReports from './components/IntelligenceReports';
+import SecureComms from './components/SecureComms';
+import Footer from './components/Footer';
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
