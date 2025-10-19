@@ -42,3 +42,6 @@ next-env.d.ts
 
 # Context directory
 .context/
+
+# Retrospectives (local documentation)
+retrospectives/

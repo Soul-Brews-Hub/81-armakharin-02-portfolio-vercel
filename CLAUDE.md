@@ -573,5 +573,35 @@ Ctrl+b, d              # Detach from session
 -   [ ] Environment variables set
 -   [ ] Git configured
 
-**Last Updated**: [Date]
+### Next.js 15 Static Export Issues (2025-10-19)
+- **Pattern**: Next.js 15 with App Router doesn't automatically copy routes-manifest.json to static export
+- **Issue**: Vercel deployment fails with "routes-manifest.json not found" error
+- **Solution**: Custom build script that copies manifest files after Next.js build
+- **Implementation**:
+  ```javascript
+  // scripts/build.js - copies manifest files from .next/ to out/
+  const manifestFiles = [
+    'routes-manifest.json',
+    'app-build-manifest.json',
+    'react-loadable-manifest.json',
+    'build-manifest.json'
+  ];
+  ```
+- **Key Files**: scripts/build.js, package.json (build script), vercel.json (buildCommand)
+- **Root Cause**: Breaking change in Next.js 15 static export behavior
+- **Verification**: Check that routes-manifest.json exists in out/ directory after build
+
+### HTML to Next.js Migration Patterns (2025-10-19)
+- **Pattern**: nnn → gogogo workflow provides systematic approach to complex migrations
+- **Discovery**: User guidance toward systematic analysis is critical for successful outcomes
+- **Pattern**: Preserve exact DOM structure and CSS files for 100% visual fidelity
+- **Discovery**: Terminal loading sequences and animations require careful timing preservation
+- **Pattern**: Custom build scripts can solve framework limitations elegantly
+- **Mistake**: Initial tendency toward quick fixes vs. comprehensive analysis
+- **Pattern**: GitHub issues serve as excellent technical planning and documentation tools
+- **Discovery**: Next.js 15 breaking changes require manual intervention for static exports
+- **Mistake**: Underestimating value of comprehensive documentation during implementation
+- **Pattern**: Visual fidelity achieved through exact preservation of original assets
+
+**Last Updated**: 2025-10-19
 **Version**: 1.0.0
