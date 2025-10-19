@@ -27,7 +27,7 @@ export default function AgentProfile() {
 
               <p className="text-secondary leading-relaxed">
                 Every day I analyze patterns, hunt anomalies, and develop solutions that stay one step ahead
-                of increasingly sophisticated fraud tactics. Now I'm transitioning my fraud detection
+                of increasingly sophisticated fraud tactics. Now I&apos;m transitioning my fraud detection
                 expertise into development - building the next generation of fraud detection systems.
               </p>
             </div>
