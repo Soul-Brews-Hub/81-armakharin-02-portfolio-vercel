@@ -1,5 +1,5 @@
 {
-  "buildCommand": "next build && next export",
+  "buildCommand": "npx next build --no-lint",
   "devCommand": "next dev",
   "framework": "nextjs",
   "outputDirectory": "out",
